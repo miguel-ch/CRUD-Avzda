@@ -1,0 +1,134 @@
+body {
+    background-color: #0a192b;
+}
+
+.btn-menu {
+    background-color: #0a192b;
+    color: white;
+    font-family: 'Work Sans';
+}
+
+.btn-menu:hover {
+    background-color: #212529;
+}
+
+.btn-menu:hover {
+    color: #28B463;
+}
+
+.barra-top {
+    background-color: #2a2a20;
+}
+
+.icono {
+    margin: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.contenedor-usu {
+    background-image: url("../img/back.jpeg");
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.img-back {
+    position: absolute;
+    z-index: -1;
+    filter: blur(100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.usuario-lbl {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.contenedor-btns {
+    margin-top: 20px;
+}
+
+#contenedor-pr {
+    overflow-x: hidden;
+}
+
+#tit {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+#contenedor-tablas {
+    background-color: #33363f;
+    height: 100%;
+    margin: 0;
+}
+
+#tablas {
+    margin: 0;
+    width: inherit;
+    height: inherit;
+    border: 0;
+}
+
+#contenedor-menu {
+    background-color: #0a192b;
+    border: 0;
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin .25s ease-out;
+}
+
+#contenedor_menu .contenedor-usu {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#contenedor-menu .list-group {
+    width: 15rem;
+}
+
+#contenedor-der {
+    border: 0;
+    min-width: 0;
+    width: 100%;
+}
+
+#contenedor-pr.toggled #contenedor-menu {
+    margin-left: 0;
+}
+
+#menu-icn {
+    font-size: 15px;
+}
+
+#menu-btn {
+    border-radius: 50px;
+    background-color: #28B463;
+    border: 0;
+}
+
+@media (min-width: 768px) {
+    #contenedor-menu {
+        margin-left: 0;
+    }
+    #contenedor-tablas {
+        min-width: 0;
+        width: 100%;
+    }
+    #contenedor-pr.toggled #contenedor-menu {
+        margin-left: -15rem;
+    }
+}

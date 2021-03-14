@@ -1,0 +1,170 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla de Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/tablas.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h2>Clientes</h2>
+                        </div>
+                        <div class="col-xs-6">
+                            <!--Boton de agregar-->
+                            <a href="#agregarModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar cliente</span></a>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover" id="tabla_info">
+
+                </table>
+                <div class="clearfix">
+                    <div class="hint-text">Mostrando <b id="qty">0</b> registros</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agregar Pedidos Modal -->
+    <div id="agregarModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Agregar Cliente</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input id="modal-crear-nombre" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input id="modal-crear-direccion" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Codigo postal</label>
+                            <input id="modal-crear-postal" type="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <input id="modal-crear-ciudad" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input id="modal-crear-telefono" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input id="modal-crear-email" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Descuento</label>
+                            <input id="modal-crear-descuento" type="number" min="0" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Zona de ventas</label>
+                            <select id="modal-crear-ventas" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input id="modal-agregar-btn" type="submit" class="btn btn-success" value="Agregar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edicion de informacion -->
+    <div id="editarModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editar Cliente</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input id="modal-edicion-nombre" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input id="modal-edicion-direccion" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Codigo postal</label>
+                            <input id="modal-edicion-postal" type="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <input id="modal-edicion-ciudad" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input id="modal-edicion-telefono" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input id="modal-edicion-email" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Descuento</label>
+                            <input id="modal-edicion-descuento" type="number" min="0" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Zona de ventas</label>
+                            <select id="modal-edicion-ventas" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input id="modal-editar-btn" type="submit" class="btn btn-info" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Borrar Pedidos -->
+    <div id="borrarModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Borrar Cliente</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Desea eliminar este cliente?</p>
+                        <p class="text-warning"><small>Esta accion no se puede revertir</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input id="modal-borrar-confirmar-btn" type="submit" class="btn btn-danger" value="Borrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/main-tablas.js"></script>
+<script src="js/clientes.js"></script>
+
+</html>

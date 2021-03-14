@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Contenedor Principal-->
+    <div class="d-flex" id="contenedor-pr">
+
+        <!--Menu-->
+        <div id="contenedor-menu">
+
+            <!--Titulo-->
+            <div class="contenedor-usu">
+                <img src="img/back.jpeg" class="img-back">
+                <img src="img/admin.jpg" class="img-logo">
+                <h4 class="usuario-lbl">Administrador</h4>
+            </div>
+
+            <!--Botones-->
+            <div class="list-group list-group-flush contenedor-btns">
+                <a id="btn_zonas" class="list-group-item list-group-item-action  btn-menu"><i class="icon-flag icono"></i>Zonas</a>
+                <a id="btn_articulos" class="list-group-item list-group-item-action  btn-menu"><i class="icon-archive icono"></i>Articulos</a>
+                <a id="btn_clientes" class="list-group-item list-group-item-action  btn-menu"><i class="icon-group icono"></i>Clientes</a>
+                <a id="btn_pedidos" class="list-group-item list-group-item-action btn-menu"><i class="icon-shopping-cart icono"></i>Pedidos</a>
+            </div>
+        </div>
+
+        <!--Contenido derecha-->
+        <div id="contenedor-der">
+            <nav class="navbar navbar-expand-lg navbar-dark barra-top">
+                <button class="btn btn-primary" id="menu-btn"><i class="icon-reorder" id="menu-icn"></i></button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="tit">
+                    CRUD
+                </div>
+            </nav>
+
+            <div class="container-fluid" id="contenedor-tablas">
+                <iframe id="tablas" scrollbar="0" src="docs/tabla-zonas.html"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Bootstrap scripts-->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
